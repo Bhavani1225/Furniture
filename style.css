@@ -1,0 +1,265 @@
+*{
+    margin: 0px;
+    box-sizing: border-box; 
+    font-family: "Bebas Neue", sans-serif;
+}
+.body{
+    background-color: #3c3027;
+    color: rgb(155, 66, 66);
+}
+
+.navbar{
+    /* contents will be in separate columns */
+    display: flex;
+    /* contents will have space b/w them */
+    justify-content: space-between; 
+    /* contents will be aligned in center */
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    /* a shadow effect will appear in navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+    /* the navbar will be fixed in top even if we scroll */
+    position: fixed;
+    /* width of the navbar */
+    width: 100%;
+    /* space between navbar and top */
+    top: 0px;
+}
+.brand{
+    text-decoration: none;
+    font-size: 30px;
+    color:  rgb(204, 50, 50);
+    /* to give boldness */
+    font-weight: 600;
+}
+#check{
+    /* checkbox cant be viewed */
+    display: none;
+}
+.icons{
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    display: none;
+}
+
+.navlinks{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.link{
+    text-decoration: none;
+    color:  rgb(204, 50, 50);
+    /* boldness of element */
+    font-weight: 600;
+    /* Hovering of color will be delayed */
+    transition: 0.3s;
+}
+.link:hover{
+    /* hovering color */
+    color: red;
+}
+
+/* hero section */
+.hero{
+    display: flex;
+    padding: 160px 8%;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+.heroText{
+    flex: 1;
+    animation: fade 1.5s ease;
+}
+#heroTitle{
+    font-size: 48px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+#heroPara{
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+.heroButton{
+    padding: 12px 25px;
+    border: none;
+    background-color: brown;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.heroButton:hover{
+    background-color: white;
+    color: brown;
+    transform: scale(1.08);
+}
+.heroImage{
+    flex: 1;
+}
+#Furnitureimg{
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* products */
+
+.products{
+    padding: 0px 8%;
+    border-radius: 15px;
+}
+.producthead{
+    font-size: 35px;
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 48px;
+}
+.productcontainer{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: rgb(205, 193, 194);
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 1);
+    transition: 0.9s;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.cardimg{
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.productname{
+    margin: 10px 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.price{
+    margin: 15px 0px;
+    color: rgb(230, 11, 11);
+}
+.productbutton{
+    padding: 12px 25px;
+    border: none;
+    background-color: rgb(221, 4, 4);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.productbutton:hover{
+    background-color: white;
+    color: brown;
+    transform: scale(1.08);
+}
+.bannerhead{
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: white;
+}
+.bannerpara{
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    color: white;
+}
+.bannerbutton{
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #713a21;
+}
+.banner{
+    padding: 20px 8% 60px 8%;
+    margin: 20px 40px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('./Images/fur6.png');
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 20px;
+    background-attachment: fixed;
+}
+.content{
+    height: 200px;
+    background-color:snow;
+    box-shadow: 0 2px 10px rgba(0,0,0,0,1);
+    padding: 0px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* animation */
+@keyframes fade{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* responsive */
+@media (max-width:768px){
+    .navbar{
+        padding: 20px 5%;
+    }
+    .icons{
+        /* displays icons in smaller screen */
+        display: flex;
+    }
+    #cancel{
+        /* cancel icon will not display */
+        display: none;
+    }
+    #check:checked~.icons #menu{
+        display:none;
+    }
+    #check:checked~.icons #cancel{
+        display:block;
+    }
+    .navlinks{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0px;
+        flex-direction: column;
+        background-color: rgba(204, 50, 50, 0.772);
+        backdrop-filter: blur(10px);
+        /* height: 0px; */
+        display: none;
+    }
+    #check:checked~.navlinks{
+        display: block;
+    }
+    .links{
+        text-align: center;
+        margin: 5px 0px;
+    }
+    .hero{
+        /* when viewing in smaller screen the contents will adjust to center */
+        flex-direction: column;
+        text-align: center;
+    }
+    #heroTitle{
+        font-size: 35px;
+    }
+}
