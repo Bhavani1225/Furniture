@@ -242,6 +242,7 @@
 }
 .html{
     scroll-behavior: smooth;
+    /*for smooth scrolling */
 }
 /* animation */
 @keyframes fade{
